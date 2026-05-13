@@ -1,16 +1,84 @@
-# React + Vite
+# vulse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Feel the pulse of done.
 
-Currently, two official plugins are available:
+A lightweight task manager with a clean card-based UI, drag-and-drop reordering, dark mode, and local-first persistence. Built with React 19, Vite 7, and Tailwind CSS 4.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- **Card layout** — Tasks displayed in a responsive Google Keep-style grid
+- **Drag to reorder** — Rearrange tasks by dragging cards
+- **Filter & sort** — Filter by status (all / active / completed), sort by newest, oldest, priority, or name
+- **Search** — Real-time text search across all tasks
+- **Priority levels** — Assign low / medium / high priority to each task
+- **Due dates & categories** — Optional date picker and category labels
+- **Inline editing** — Click Edit to rename a task without leaving the card
+- **Undo delete** — Deleted tasks can be restored via a snackbar
+- **Dark mode** — Toggle between light and dark themes
+- **Data portability** — Export tasks as JSON, import from a JSON file
+- **Local persistence** — All data saved to localStorage, nothing sent to a server
+- **Responsive** — Works on desktop and mobile with a hamburger navigation menu
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+| Tool | Version |
+|------|---------|
+| React | 19 |
+| Vite | 7 |
+| Tailwind CSS | 4 |
+| React Router | 7 |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+# clone the repo
+git clone https://github.com/shikeshjayan/vulse-task-manager-app.git
+cd vulse
+
+# install dependencies
+npm install
+
+# start dev server
+npm run dev
+
+# build for production
+npm run build
+
+# preview production build
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+  components/       Reusable UI components
+    ConfirmModal.jsx
+    Navbar.jsx
+    Snackbar.jsx
+    TaskItem.jsx
+  contexts/         React context providers
+    TasksProvider.jsx
+    ThemeProvider.jsx
+  pages/            Route-level page components
+    About.jsx
+    Home.jsx
+    Settings.jsx
+    Tasks.jsx
+  App.jsx           Root component with routing
+  main.jsx          Entry point
+  index.css         Tailwind imports and custom animations
+```
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## License
+
+MIT
